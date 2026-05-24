@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İzmir Tarihi Yerler ve Kültür Rehberi</title>
+    <meta
+      name="description"
+      content="İzmir'in en popüler tarihi yerleri, antik kentleri, yerel gelenekleri ve geçmişten bugüne fotoğraf karşılaştırmalarıyla modern turizm rehberi."
+    />
+    <meta
+      name="keywords"
+      content="İzmir tarihi yerler, İzmir turistik mekanlar, Efes Antik Kenti, İzmir gezi rehberi, İzmir tarihi, İzmir kültürü"
+    />
+    <meta name="author" content="Onur Arda Özcan" />
+    <meta property="og:title" content="İzmir Tarihi Yerler ve Kültür Rehberi" />
+    <meta
+      property="og:description"
+      content="Efes'ten Kemeraltı'na, Kadifekale'den Teos'a uzanan sinematik İzmir tarihi ve kültür deneyimi."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#EFE9E3" />
+
+    <link rel="preconnect" href="https://commons.wikimedia.org" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <div class="loader" aria-label="Sayfa yükleniyor">
+      <div class="loader-mark">
+        <div class="sun"></div>
+        <div class="skyline">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <p>İzmir'in katmanları açılıyor</p>
+    </div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Ana sayfa">
+        <span class="brand-mark">İ</span>
+        <span>İzmir Hafıza Rotası</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Ana menü">
+        <a href="#yerler">Tarihi Yerler</a>
+        <a href="#zaman">Zaman Çizgisi</a>
+        <a href="#gelenekler">Gelenekler</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#harita">Harita</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="ambient-lines" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-aos="fade-up">8.500 yıllık kıyı hafızası</p>
+          <h1 id="hero-title" data-aos="fade-up" data-aos-delay="120">
+            İzmir: taşta, rüzgarda ve çarşı sesinde yaşayan tarih
+          </h1>
+          <p class="hero-copy" data-aos="fade-up" data-aos-delay="240">
+            Efes'in mermer yollarından Kemeraltı'nın gölgeli hanlarına, Saat Kulesi'nden
+            Teos kıyılarına uzanan sinematik bir kültür rotası.
+          </p>
+          <div class="hero-actions" data-aos="fade-up" data-aos-delay="360">
+            <a class="button primary" href="#yerler">Rotayı Keşfet</a>
+            <a class="button ghost" href="#zaman">Tarihi İzle</a>
+          </div>
+        </div>
+        <div class="hero-stats" data-aos="fade-left" data-aos-delay="420">
+          <div><strong class="counter" data-target="10">0</strong><span>Tarihi durak</span></div>
+          <div><strong class="counter" data-target="8500">0</strong><span>Yıllık miras</span></div>
+          <div><strong class="counter" data-target="6">0</strong><span>Yerel gelenek</span></div>
+        </div>
+      </section>
+
+      <section class="intro section-pad">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-kicker">Körfezin belleği</span>
+          <h2>Antik Smyrna'dan Cumhuriyet meydanlarına uzanan şehir</h2>
+          <p>
+            İzmir, liman kentinin çok katmanlı ritmini taşır: İon kentleri, Roma agorası,
+            Osmanlı çarşı dokusu, Levanten izleri ve Ege'nin gündelik sofra kültürü aynı
+            rotada yan yana görünür.
+          </p>
+        </div>
+      </section>
+
+      <section class="places section-pad" id="yerler" aria-labelledby="places-title">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-kicker">En popüler 10 rota</span>
+          <h2 id="places-title">İzmir'in Tarihi Yerleri</h2>
+          <p>
+            Her durak, geçmiş ve güncel fotoğraf eşleşmesi, kısa tarih arka planı,
+            önemli olaylar ve yerel bağlamıyla hazırlandı.
+          </p>
+        </div>
+        <div class="place-grid" id="placeGrid"></div>
+      </section>
+
+      <section class="timeline-section section-pad" id="zaman" aria-labelledby="timeline-title">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-kicker">Zaman çizgisi</span>
+          <h2 id="timeline-title">İzmir Tarihinden Dönüm Noktaları</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section class="quote-section" aria-label="Tarihi alıntılar">
+        <div class="quote-bg"></div>
+        <div class="quote-wrap" data-aos="zoom-in">
+          <div class="swiper quote-swiper">
+            <div class="swiper-wrapper" id="quoteSlides"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="traditions section-pad" id="gelenekler" aria-labelledby="traditions-title">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-kicker">Yerel doku</span>
+          <h2 id="traditions-title">İzmir'e Özgü Gelenekler</h2>
+          <p>
+            Ege'nin açık hava ritmi, İzmir'de kahvaltıdan düğüne, çarşıdan zeybeğe
+            uzanan kendine has pratiklerle görünür.
+          </p>
+        </div>
+        <div class="tradition-grid" id="traditionGrid"></div>
+      </section>
+
+      <section class="gallery section-pad" id="galeri" aria-labelledby="gallery-title">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-kicker">Geçmiş / bugün</span>
+          <h2 id="gallery-title">İzmir Fotoğraf Galerisi</h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+
+      <section class="map-section section-pad" id="harita" aria-labelledby="map-title">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-kicker">Rota haritası</span>
+          <h2 id="map-title">Tarihi İzmir'i Haritada Gör</h2>
+        </div>
+        <div class="map-layout" data-aos="fade-up">
+          <div class="map-list" id="mapList"></div>
+          <div class="map-frame">
+            <iframe
+              id="mapFrame"
+              title="İzmir tarihi yerler haritası"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="map-caption" id="mapCaption"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>İzmir Hafıza Rotası</strong>
+        <p>Geçmişin izlerini bugünün gezi kültürüyle buluşturan statik turizm sitesi.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Yukarı</a>
+        <a href="#yerler">Tarihi Yerler</a>
+        <a href="#gelenekler">Gelenekler</a>
+      </div>
+      <div class="footer-sources">
+        <span>Bilgi ve görsel kaynakları:</span>
+        <a href="https://whc.unesco.org/en/list/1018/" target="_blank" rel="noreferrer">UNESCO Efes</a>
+        <a href="https://izmir.ktb.gov.tr/EN-239243/historical-and-cultural-places.html" target="_blank" rel="noreferrer">İzmir İl Kültür ve Turizm</a>
+        <a href="https://commons.wikimedia.org/" target="_blank" rel="noreferrer">Wikimedia Commons</a>
+      </div>
+      <p class="copyright">© 2026 Tüm hakları Onur Arda Özcan'a aittir.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
