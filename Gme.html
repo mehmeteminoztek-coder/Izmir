@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Çelik Çomak Oyunu | İzmir Hafıza Rotası</title>
+    <meta
+      name="description"
+      content="İzmir'in yerel mahalle oyunlarından çelik çomak için tarayıcıda oynanabilen HTML, CSS ve JavaScript oyunu."
+    />
+    <meta
+      name="keywords"
+      content="çelik çomak oyunu, İzmir yerel oyunları, geleneksel oyunlar, İzmir kültürü"
+    />
+    <meta name="author" content="Onur Arda Özcan" />
+    <meta name="theme-color" content="#EFE9E3" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body class="game-body">
+    <header class="game-header">
+      <a class="brand" href="index.html" aria-label="Ana sayfaya dön">
+        <span class="brand-mark">İ</span>
+        <span>İzmir Hafıza Rotası</span>
+      </a>
+      <nav class="game-nav" aria-label="Oyun menüsü">
+        <a href="index.html">Siteye Dön</a>
+        <a href="index.html#gelenekler">Gelenekler</a>
+      </nav>
+    </header>
+
+    <main class="game-shell">
+      <section class="game-hero" aria-labelledby="game-title">
+        <div>
+          <p class="eyebrow">İzmir'in sokak oyunları</p>
+          <h1 id="game-title">Çelik Çomak</h1>
+          <p>
+            Kısa çomağı önce havalandır, sonra doğru anda vur. Zamanlama ve güç ne kadar
+            iyiyse çomak o kadar uzağa gider.
+          </p>
+        </div>
+        <div class="game-score-card" aria-live="polite">
+          <span>En İyi Mesafe</span>
+          <strong id="bestScore">0 m</strong>
+        </div>
+      </section>
+
+      <section class="game-stage-card" aria-label="Çelik çomak oyun alanı">
+        <div class="game-topbar">
+          <div>
+            <span class="game-label">Tur</span>
+            <strong id="roundText">1 / 5</strong>
+          </div>
+          <div>
+            <span class="game-label">Son Atış</span>
+            <strong id="lastScore">0 m</strong>
+          </div>
+          <div>
+            <span class="game-label">Toplam</span>
+            <strong id="totalScore">0 m</strong>
+          </div>
+        </div>
+
+        <canvas id="gameCanvas" width="1100" height="560" aria-label="Çelik çomak oyun kanvası"></canvas>
+
+        <div class="power-panel">
+          <div>
+            <span class="game-label">Güç ve zamanlama</span>
+            <div class="power-track" aria-hidden="true">
+              <span class="sweet-zone"></span>
+              <span class="power-needle" id="powerNeedle"></span>
+            </div>
+          </div>
+          <button class="button primary game-action" id="actionButton" type="button">Çomağı Havalandır</button>
+        </div>
+
+        <p class="game-message" id="gameMessage">
+          Başlamak için butona bas veya boşluk tuşuna dokun. İkinci vuruşta ibre yeşil alana ne kadar yakınsa atış o kadar güçlü olur.
+        </p>
+      </section>
+
+      <section class="game-info-grid">
+        <article>
+          <h2>Nasıl Oynanır?</h2>
+          <p>
+            Çelik çomakta uzun sopa ile kısa çomak yerden kaldırılır ve havadayken tekrar
+            vurularak uzağa gönderilir. Bu sürümde ilk hamle çomağı havalandırır, ikinci hamle
+            vuruşu yapar.
+          </p>
+        </article>
+        <article>
+          <h2>Kontroller</h2>
+          <p>
+            Masaüstünde boşluk tuşu veya buton, telefonda buton ya da oyun alanına dokunma
+            yeterlidir. Beş turun sonunda toplam mesafen ve en iyi atışın kaydedilir.
+          </p>
+        </article>
+        <article>
+          <h2>İzmir Kültüründeki Yeri</h2>
+          <p>
+            Çelik çomak, mahalle aralarında az malzemeyle oynanan, çeviklik ve zamanlama isteyen
+            eski sokak oyunlarından biridir; bu sayfa geleneği dijital bir hatıraya dönüştürür.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer game-footer">
+      <div>
+        <strong>Çelik Çomak Oyunu</strong>
+        <p>GitHub Pages uyumlu, statik HTML/CSS/JavaScript oyun sayfası.</p>
+      </div>
+      <p class="copyright">© 2026 Tüm hakları Onur Arda Özcan'a aittir.</p>
+    </footer>
+
+    <script src="game.js"></script>
+  </body>
+</html>
